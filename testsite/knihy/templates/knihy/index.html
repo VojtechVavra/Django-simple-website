@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <title>Knihy</title>
+    </head>
+    <body>
+        <h1>Mini-knižní databáze</h1>
+        <p>Počet knih: {{books.count}}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/add_book/">Přidat knihu</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/add_author/">Přidat autora</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/add_genre/">Přidat žánr</a>
+        </p>
+        <ol>
+        {% for book in books %}
+            <!-- {{book.id}}. -->
+            <li><a href={% url "book_detail" book.id %}> {{book.nazev}} </li></a><br>
+        {% endfor %}
+        </ol>
+    </body>
+</html>

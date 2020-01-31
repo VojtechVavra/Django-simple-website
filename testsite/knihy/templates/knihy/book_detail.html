@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1> {{ book.nazev }} </h1>
+    <h3>Autor: {{ book.autor.cele_jmeno }} </h3>
+    <a href={% url "author_detail" book.autor.id %}> {{book.autor.cele_jmeno}} <br> </a>
+    <h3>Žánr: {{book.zanr.nazev_zanru}} </h3>
+    <a href="/home/">Zpět<br> </a>
+</body>
+</html>

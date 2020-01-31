@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <h1> {{ autor.cele_jmeno }} </h1>
+        <h2> {{ autor.info_text }} </h2>
+        <h3>Autor ID: {{ pk }} </h3>
+
+        <h2>Autorova díla:</h2>
+        <ol>
+        {% for book in books %}
+        <div>
+            <h2><li> {{ book.nazev }} &nbsp;&nbsp; <a href={% url "book_detail" book.id %}> >> </a> &nbsp;&nbsp;
+                <small><small>({{ book.zanr.nazev_zanru }})</small></small></h2></li>
+        </div>
+        {% endfor %}
+        </ol>
+
+        <a href="/home/">Zpět<br> </a>
+    </body>
+</html>
