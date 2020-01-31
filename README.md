@@ -1,5 +1,6 @@
 # Django-simple-website
-School project - simple book database website, created by using Django 
+School project - simple book database website,
+created with Django 
 
 How to start:
 1) Go to directory /testsite/
